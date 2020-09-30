@@ -10,15 +10,11 @@ import (
     "net/http"
     "strconv"
     "encoding/json"
-    jwt "github.com/dgrijalva/jwt-go"
-	"github.com/gorilla/mux"
-	"golang.org/x/crypto/bcrypt"
 )
  
 func main() {
  
     http.HandleFunc("/mahasiswa", GetMahasiswa)
-    http.HandleFunc("/login", Login)
     http.HandleFunc("/mahasiswa/create", PostMahasiswa)
     http.HandleFunc("/mahasiswa/update", UpdateMahasiswa)
     http.HandleFunc("/mahasiswa/delete", DeleteMahasiswa)
